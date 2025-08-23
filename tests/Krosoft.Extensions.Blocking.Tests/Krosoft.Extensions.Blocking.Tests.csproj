@@ -3,7 +3,7 @@
 		<PackageReference Include="JetBrains.Annotations" Version="2025.2.0" />
 		<PackageReference Include="Krosoft.Extensions.Identity.Abstractions" Version="2025.8.20.1799" />
 		<PackageReference Include="Krosoft.Extensions.Testing" Version="2025.5.13.1513" />
-		<PackageReference Include="Krosoft.Extensions.WebApi" Version="2025.5.13.1505" />
+		<PackageReference Include="Krosoft.Extensions.WebApi" Version="2025.8.23.2259" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\..\src\Krosoft.Extensions.Blocking.Memory\Krosoft.Extensions.Blocking.Memory.csproj" />
