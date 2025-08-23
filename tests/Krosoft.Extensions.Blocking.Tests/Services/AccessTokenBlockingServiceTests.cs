@@ -3,13 +3,14 @@ using Krosoft.Extensions.Blocking.Abstractions.Interfaces;
 using Krosoft.Extensions.Blocking.Extensions;
 using Krosoft.Extensions.Blocking.Memory.Extensions;
 using Krosoft.Extensions.Blocking.Services;
+using Krosoft.Extensions.Blocking.Tests.Core;
 using Krosoft.Extensions.Core.Extensions;
-using Krosoft.Extensions.Identity.Abstractions.Fakes;
 using Krosoft.Extensions.Identity.Abstractions.Interfaces;
 using Krosoft.Extensions.Testing;
-using Krosoft.Extensions.WebApi.Extensions;
+using Krosoft.Extensions.Testing.Extensions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 
 namespace Krosoft.Extensions.Blocking.Tests.Services;
 
@@ -21,10 +22,10 @@ public class AccessTokenBlockingServiceTests : BaseTest
 
     protected override void AddServices(IServiceCollection services, IConfiguration configuration)
     {
-        services.AddLoggingExt();
-        services.AddBlocking();
-        services.AddMemoryBlockingStorage();
-        services.AddTransient<IAccessTokenProvider, FakeAccessTokenProvider>();
+        services.AddBlocking()
+                .AddMemoryBlockingStorage()
+                .AddTransient<IAccessTokenProvider, FakeProvider>()
+                .SwapTransient(_ => new Mock<ILogger<AccessTokenBlockingService>>().Object);
     }
 
     [TestMethod]
