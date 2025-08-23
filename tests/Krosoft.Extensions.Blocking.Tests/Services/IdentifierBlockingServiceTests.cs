@@ -9,7 +9,6 @@ using Krosoft.Extensions.Testing;
 using Krosoft.Extensions.Testing.Extensions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 
 namespace Krosoft.Extensions.Blocking.Tests.Services;
 
@@ -21,12 +20,10 @@ public class IdentifierBlockingServiceTests : BaseTest
 
     protected override void AddServices(IServiceCollection services, IConfiguration configuration)
     {
- 
-
         services.AddBlocking()
                 .AddMemoryBlockingStorage()
                 .AddTransient<IIdentifierProvider, FakeProvider>()
-                .SwapTransient(_ => new Mock<ILogger<IdentifierBlockingService>>().Object);
+                .MockLogger<IdentifierBlockingService>();
     }
 
     [TestMethod]

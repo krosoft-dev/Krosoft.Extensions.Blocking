@@ -7,7 +7,6 @@ using Krosoft.Extensions.Testing;
 using Krosoft.Extensions.Testing.Extensions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 
 namespace Krosoft.Extensions.Blocking.Tests.Services;
 
@@ -21,7 +20,7 @@ public class IpBlockingServiceTests : BaseTest
     {
         services.AddBlocking()
                 .AddMemoryBlockingStorage()
-                .SwapTransient(_ => new Mock<ILogger<IpBlockingService>>().Object);
+                .MockLogger<IpBlockingService>();
     }
 
     [TestMethod]

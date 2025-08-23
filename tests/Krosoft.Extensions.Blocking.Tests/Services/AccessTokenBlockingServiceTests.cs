@@ -10,7 +10,6 @@ using Krosoft.Extensions.Testing;
 using Krosoft.Extensions.Testing.Extensions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 
 namespace Krosoft.Extensions.Blocking.Tests.Services;
 
@@ -25,7 +24,7 @@ public class AccessTokenBlockingServiceTests : BaseTest
         services.AddBlocking()
                 .AddMemoryBlockingStorage()
                 .AddTransient<IAccessTokenProvider, FakeProvider>()
-                .SwapTransient(_ => new Mock<ILogger<AccessTokenBlockingService>>().Object);
+                .MockLogger<AccessTokenBlockingService>();
     }
 
     [TestMethod]
