@@ -2,7 +2,7 @@
 	<ItemGroup>
 		<PackageReference Include="JetBrains.Annotations" Version="2025.2.0" />
 		<PackageReference Include="Krosoft.Extensions.Identity.Abstractions" Version="2025.8.23.2470" />
-		<PackageReference Include="Krosoft.Extensions.Testing" Version="2025.8.25.2524" /> 
+		<PackageReference Include="Krosoft.Extensions.Testing" Version="2025.8.25.2570" /> 
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\..\src\Krosoft.Extensions.Blocking.Memory\Krosoft.Extensions.Blocking.Memory.csproj" />
