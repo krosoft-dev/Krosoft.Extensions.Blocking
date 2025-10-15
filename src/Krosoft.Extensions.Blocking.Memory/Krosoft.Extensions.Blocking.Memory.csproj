@@ -16,7 +16,7 @@
 		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.10" />
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="Krosoft.Extensions.Cache.Memory" Version="2025.9.18.3186" />
+		<PackageReference Include="Krosoft.Extensions.Cache.Memory" Version="2025.10.15.3660" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\Krosoft.Extensions.Blocking.Abstractions\Krosoft.Extensions.Blocking.Abstractions.csproj" />
