@@ -1,0 +1,18 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="ARM" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/src/">
+    <Project Path="src/Krosoft.Extensions.Blocking.Abstractions/Krosoft.Extensions.Blocking.Abstractions.csproj" />
+    <Project Path="src/Krosoft.Extensions.Blocking.Memory/Krosoft.Extensions.Blocking.Memory.csproj" />
+    <Project Path="src/Krosoft.Extensions.Blocking.Redis/Krosoft.Extensions.Blocking.Redis.csproj" />
+    <Project Path="src/Krosoft.Extensions.Blocking/Krosoft.Extensions.Blocking.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Krosoft.Extensions.Blocking.Memory.Tests/Krosoft.Extensions.Blocking.Memory.Tests.csproj" />
+    <Project Path="tests/Krosoft.Extensions.Blocking.Tests/Krosoft.Extensions.Blocking.Tests.csproj" />
+  </Folder>
+</Solution>
