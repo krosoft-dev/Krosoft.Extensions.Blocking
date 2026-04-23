@@ -24,7 +24,7 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.7" />
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="Krosoft.Extensions.Identity.Abstractions" Version="2026.4.22.6775" />
+		<PackageReference Include="Krosoft.Extensions.Identity.Abstractions" Version="2026.4.23.6926" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\Krosoft.Extensions.Blocking.Abstractions\Krosoft.Extensions.Blocking.Abstractions.csproj" />
