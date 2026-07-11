@@ -4,7 +4,7 @@
 		<Description>Package pour faciliter le blocage de connexion basé sur le cache Redis.</Description>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="Krosoft.Extensions.Cache.Distributed.Redis" Version="2026.6.25.7910" />
+		<PackageReference Include="Krosoft.Extensions.Cache.Distributed.Redis" Version="2026.7.2.8028" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\Krosoft.Extensions.Blocking.Abstractions\Krosoft.Extensions.Blocking.Abstractions.csproj" />
