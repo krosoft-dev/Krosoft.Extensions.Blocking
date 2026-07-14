@@ -4,6 +4,6 @@
 		<Description>Package d'abstraction pour faciliter le blocage de connexion.</Description>
 	</PropertyGroup>
 	<ItemGroup Condition="'$(TargetFramework)' == 'net10.0'">
-		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.9" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.10" />
 	</ItemGroup>
 </Project>
