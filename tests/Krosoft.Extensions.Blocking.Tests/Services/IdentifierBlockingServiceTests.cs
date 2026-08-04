@@ -20,8 +20,7 @@ public class IdentifierBlockingServiceTests : BaseTest
 
     protected override void AddServices(IServiceCollection services, IConfiguration configuration)
     {
-        services.AddBlocking()
-                .AddMemoryBlockingStorage()
+        services.AddBlocking(options => options.UseMemoryStorage())
                 .AddTransient<IIdentifierProvider, FakeProvider>()
                 .MockLogger<IdentifierBlockingService>();
     }

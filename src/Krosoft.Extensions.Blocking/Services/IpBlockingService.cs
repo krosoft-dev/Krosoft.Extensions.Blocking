@@ -6,9 +6,9 @@ namespace Krosoft.Extensions.Blocking.Services;
 
 public class IpBlockingService : BlockingService, IIpBlockingService
 {
-    public IpBlockingService(IBlockingStorageProvider blockingStorageProvider,
+    public IpBlockingService(IBlockingStorage blockingStorage,
                              ILogger<IpBlockingService> logger)
-        : base(BlockType.Ip, blockingStorageProvider, logger)
+        : base(BlockType.Ip, blockingStorage, logger)
     {
     }
 }

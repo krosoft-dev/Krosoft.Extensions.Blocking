@@ -10,10 +10,10 @@ public class IdentifierBlockingService : BlockingService, IIdentifierBlockingSer
 {
     private readonly IIdentifierProvider _identifierProvider;
 
-    public IdentifierBlockingService(IBlockingStorageProvider blockingStorageProvider,
+    public IdentifierBlockingService(IBlockingStorage blockingStorage,
                                      ILogger<IdentifierBlockingService> logger,
                                      IIdentifierProvider identifierProvider)
-        : base(BlockType.Identifier, blockingStorageProvider, logger)
+        : base(BlockType.Identifier, blockingStorage, logger)
     {
         _identifierProvider = identifierProvider;
     }

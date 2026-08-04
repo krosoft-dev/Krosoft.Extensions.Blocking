@@ -3,11 +3,11 @@ using Krosoft.Extensions.Cache.Distributed.Redis.Interfaces;
 
 namespace Krosoft.Extensions.Blocking.Redis.Services;
 
-public class RedisBlockingStorageProvider : IBlockingStorageProvider
+public class RedisBlockingStorage : IBlockingStorage
 {
     private readonly IDistributedCacheProvider _distributedCacheProvider;
 
-    public RedisBlockingStorageProvider(IDistributedCacheProvider distributedCacheProvider)
+    public RedisBlockingStorage(IDistributedCacheProvider distributedCacheProvider)
     {
         _distributedCacheProvider = distributedCacheProvider;
     }

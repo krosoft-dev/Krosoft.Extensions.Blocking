@@ -10,10 +10,10 @@ public class AccessTokenBlockingService : BlockingService, IAccessTokenBlockingS
 {
     private readonly IAccessTokenProvider _accessTokenProvider;
 
-    public AccessTokenBlockingService(IBlockingStorageProvider blockingStorageProvider,
+    public AccessTokenBlockingService(IBlockingStorage blockingStorage,
                                       ILogger<AccessTokenBlockingService> logger,
                                       IAccessTokenProvider accessTokenProvider)
-        : base(BlockType.AccessToken, blockingStorageProvider, logger)
+        : base(BlockType.AccessToken, blockingStorage, logger)
     {
         _accessTokenProvider = accessTokenProvider;
     }

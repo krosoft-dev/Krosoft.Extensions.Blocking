@@ -1,13 +1,15 @@
-﻿namespace Krosoft.Extensions.Blocking.Abstractions.Interfaces;
+using Microsoft.Extensions.DependencyInjection;
 
+namespace Krosoft.Extensions.Blocking.Abstractions.Interfaces;
+
+/// <summary>
+///     Interface pour définir un provider de stockage de blocage.
+/// </summary>
 public interface IBlockingStorageProvider
 {
-    Task<IEnumerable<string>> GetKeysAsync(string collectionKey,
-                                           CancellationToken cancellationToken);
-
-    Task<bool> IsSetAsync(string collectionKey, string key, CancellationToken cancellationToken);
-    Task<bool> RemoveAsync(string collectionKey, string key, CancellationToken cancellationToken);
-    Task<long> RemoveAsync(string collectionKey, ISet<string> keys, CancellationToken cancellationToken);
-    Task SetAsync(string collectionKey, string key, string entry, CancellationToken cancellationToken);
-    Task SetAsync(string collectionKey, IDictionary<string, string> entryByKey, CancellationToken cancellationToken);
+    /// <summary>
+    ///     Enregistre le <see cref="IBlockingStorage" /> et les services dont il dépend.
+    /// </summary>
+    /// <param name="services">Collection de services.</param>
+    void RegisterServices(IServiceCollection services);
 }

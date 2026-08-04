@@ -3,11 +3,11 @@ using Krosoft.Extensions.Cache.Memory.Interfaces;
 
 namespace Krosoft.Extensions.Blocking.Memory.Services;
 
-public class MemoryBlockingStorageProvider : IBlockingStorageProvider
+public class MemoryBlockingStorage : IBlockingStorage
 {
     private readonly ICacheProvider _cacheProvider;
 
-    public MemoryBlockingStorageProvider(ICacheProvider cacheProvider)
+    public MemoryBlockingStorage(ICacheProvider cacheProvider)
     {
         _cacheProvider = cacheProvider;
     }
