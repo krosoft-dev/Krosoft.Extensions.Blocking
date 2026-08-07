@@ -1,4 +1,4 @@
-name: Nuget 'Krosoft.Extensions.Blocking.Memory' - $(Date:yyyy.MM.dd).$(BuildID)
+name: Nuget 'Krosoft.Extensions.Blocking' - $(Date:yyyy.MM.dd).$(BuildID)
 
 pr: none
 
@@ -15,13 +15,14 @@ trigger:
       - main
   paths:
     include:
-      - "**/Krosoft.Extensions.Blocking.Memory/*"
+      - src
+      - Directory.Build.props
 
 extends:
   template: tools/devops/templates/pipelines/nuget-template.yml@Krosoft.Extensions
   parameters:
     packages:
-     - "Krosoft.Extensions.Blocking.Abstractions"
-     - "Krosoft.Extensions.Blocking.Memory"
-     
-
+      - "Krosoft.Extensions.Blocking.Abstractions"
+      - "Krosoft.Extensions.Blocking"
+      - "Krosoft.Extensions.Blocking.Memory"
+      - "Krosoft.Extensions.Blocking.Redis"
