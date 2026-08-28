@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<ItemGroup>
 		<PackageReference Include="JetBrains.Annotations" Version="2026.2.0" />
-		<PackageReference Include="Krosoft.Extensions.Identity.Abstractions" Version="2026.8.27.9730" />
-		<PackageReference Include="Krosoft.Extensions.Testing" Version="2026.8.27.9704" /> 
+		<PackageReference Include="Krosoft.Extensions.Identity.Abstractions" Version="2026.8.28.9786" />
+		<PackageReference Include="Krosoft.Extensions.Testing" Version="2026.8.28.9835" /> 
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\..\src\Krosoft.Extensions.Blocking.Memory\Krosoft.Extensions.Blocking.Memory.csproj" />
