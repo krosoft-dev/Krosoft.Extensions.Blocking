@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<ItemGroup>
 		<PackageReference Include="JetBrains.Annotations" Version="2026.2.0" />
-		<PackageReference Include="Krosoft.Extensions.Identity.Abstractions" Version="2026.11.16.13615" />
+		<PackageReference Include="Krosoft.Extensions.Identity.Abstractions" Version="2026.11.16.13859" />
 		<PackageReference Include="Krosoft.Extensions.Testing" Version="2026.11.16.13740" /> 
 	</ItemGroup>
 	<ItemGroup>
